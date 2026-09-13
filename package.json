@@ -21,10 +21,12 @@
 		"lint:css:fix": "npm run lint:css -- --fix",
 		"fmt": "npx oxfmt ui --check",
 		"fmt:fix": "npx oxfmt ui",
-		"type-check": "node_modules/typescript/bin/tsc --noEmit",
+		"type-check": "node node_modules/typescript/bin/tsc --noEmit",
 		"test:locales": "node ./test-locales.mjs"
 	},
 	"dependencies": {
+		"@fontsource-variable/inter": "^5.3.0",
+		"@fortawesome/fontawesome-free": "^7.3.1",
 		"@popperjs/core": "^2.11.8",
 		"@types/golang-wasm-exec": "^1.15.2",
 		"@types/pako": "^2.0.0",
@@ -66,6 +68,7 @@
 		"stylelint": "^16.22.0",
 		"stylelint-scss": "^6.12.1",
 		"stylelint-selector-bem-pattern": "^4.0.1",
+		"tsx": "^4.23.13",
 		"typescript": "^7.0.2",
 		"vite": "^8.2.0",
 		"vite-plugin-checker": "^0.14.5",

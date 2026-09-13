@@ -9,13 +9,29 @@
 		"home": {
 			"title": "WoWSims - The Burning Crusade",
 			"description": "A powerful simulation tool for World of Warcraft: The Burning Crusade",
-			"welcomeDescription": "Welcome to WoWSims - The Burning Crusade! This is a community-driven project to provide class and raid simulations for World of Warcraft® The Burning Crusade Classic together with the leading theorycrafters and class representatives."
+			"welcomeDescription": "Plan your build, test an encounter, and explore the results in one focused workspace for The Burning Crusade Classic.",
+			"eyebrow": "THE BURNING CRUSADE · CHARACTER SIMULATOR",
+			"heroTitle": "Make every build count.",
+			"workspaceEyebrow": "CHOOSE YOUR WORKSPACE",
+			"chooseClass": "Select a class",
+			"chooseClassDescription": "Choose a specialization to configure gear, talents, rotation, and raid conditions."
 		},
 		"header": {
 			"wowsims": "WoWSims",
 			"expansion": "The Burning Crusade",
 			"supportDevs": "Support our devs"
 		}
+	},
+	"workspace": {
+		"title": "Simulation workspace",
+		"subtitle": "Build, simulate, compare",
+		"build": "Build",
+		"setup": "Setup",
+		"results": "Results",
+		"batch": "Batch",
+		"navigate": "Workspace section",
+		"character_stats": "Character stats",
+		"original_project": "Original WoWSims project"
 	},
 	"common": {
 		"none": "None",

@@ -48,3 +48,6 @@
 // Import other plugin styles
 @import 'tippy.js/dist/tippy';
 @import 'shared/tippy_style_overrides';
+
+// Shared presentation tokens for the fork. Class/spec colors remain in their own stylesheets.
+@import 'shared/modern_theme';

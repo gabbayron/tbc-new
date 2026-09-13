@@ -16,8 +16,10 @@ export const CURRENT_API_VERSION: number = readMessageOption(ProtoVersion, 'prot
 
 // Github pages serves our site under the /tbc directory (because the repo name is tbc)
 export const REPO_NAME = 'tbc';
-export const REPO_URL = `https://github.com/wowsims/${REPO_NAME}-new`;
-export const REPO_RELEASES_URL = `${REPO_URL}/releases`;
+export const ORIGINAL_REPO_URL = 'https://github.com/wowsims/tbc-new';
+export const REPO_URL = 'https://github.com/gabbayron/tbc-new';
+// Use upstream downloads until this fork publishes its own binaries.
+export const REPO_RELEASES_URL = `${ORIGINAL_REPO_URL}/releases`;
 export const REPO_NEW_ISSUE_URL = `${REPO_URL}/issues/new`;
 export const REPO_CHOOSE_NEW_ISSUE_URL = `${REPO_NEW_ISSUE_URL}/choose`;
 

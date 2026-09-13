@@ -75,20 +75,30 @@ export abstract class SimUI extends Component {
 			<>
 				<div className="sim-root">
 					<div className="sim-bg" />
-					{config.noticeText ? (
-						<div className="notices-banner alert border-bottom mb-0 text-center">{config.noticeText}</div>
-					) : null}
+					{config.noticeText ? <div className="notices-banner alert border-bottom mb-0 text-center">{config.noticeText}</div> : null}
 					<div className="sim-container">
 						<aside className="sim-sidebar">
 							<div className="sim-title" />
 							<div className="sim-sidebar-content">
 								<div className="sim-sidebar-actions" />
 								<div className="sim-sidebar-results" />
-								<div className="sim-sidebar-stats" />
+								<details className="sim-sidebar-stats-details">
+									<summary>{i18n.t('workspace.character_stats')}</summary>
+									<div className="sim-sidebar-stats" />
+								</details>
 								<div className="sim-sidebar-socials" />
+								<div className="sim-sidebar-credit">
+									<a href="https://github.com/wowsims/tbc-new" target="_blank" rel="noopener">
+										{i18n.t('workspace.original_project')}
+									</a>
+									<span aria-hidden="true"> · </span>
+									<a href="https://github.com/wowsims/tbc-new/blob/master/LICENSE" target="_blank" rel="noopener">
+										MIT
+									</a>
+								</div>
 							</div>
 						</aside>
-						<div className="sim-content container-fluid" />
+						<main className="sim-content container-fluid" id="sim-content" tabIndex={-1} />
 					</div>
 				</div>
 				<div className="sim-toast-container p-3 bottom-0 right-0" id="toastContainer" />
@@ -96,6 +106,7 @@ export abstract class SimUI extends Component {
 		);
 
 		this.rootElem.appendChild(container);
+		// The detailed table remains one click away without occupying the whole sidebar.
 
 		this.simContentContainer = this.rootElem.querySelector('.sim-content') as HTMLElement;
 		this.simHeader = new SimHeader(this.simContentContainer, this);

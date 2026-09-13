@@ -1,4 +1,5 @@
 export const trackPageView = (title: string, slug: string) => {
+	if (typeof gtag !== 'function') return;
 	const normalizedSlug = slug.startsWith('/') ? slug.slice(1) : slug;
 	gtag('event', 'page_view', {
 		page_title: title,
@@ -15,6 +16,7 @@ export type TrackEventProps = {
 };
 
 export const trackEvent = ({ action, category, label, value, additionalData }: TrackEventProps) => {
+	if (typeof gtag !== 'function') return;
 	gtag('event', action, {
 		event_category: category,
 		event_label: label,

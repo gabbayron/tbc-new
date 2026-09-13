@@ -1,0 +1,189 @@
+/* stylelint-disable plugin/stylelint-bem-namics */
+:root,
+:root[data-theme='dark'] {
+	--ui-bg: #11151b;
+	--ui-surface: #1d232b;
+	--ui-surface-raised: #252d37;
+	--ui-field: #202833;
+	--ui-text: #f4f1e8;
+	--ui-muted: #b4bdc8;
+	--ui-border: #39424d;
+	--ui-brass: #c98e2c;
+	--ui-brass-strong: #e8b967;
+	--ui-shadow: 0 16px 48px rgb(0 0 0 / 0.22);
+	--ui-hero-overlay: linear-gradient(90deg, rgb(17 21 27 / 0.98), rgb(17 21 27 / 0.7) 62%, rgb(17 21 27 / 0.86));
+	--bs-body-bg: var(--ui-bg);
+	--bs-body-color: var(--ui-text);
+	--bs-border-color: var(--ui-border);
+	--bs-secondary-bg: var(--ui-surface);
+	--bs-tertiary-bg: var(--ui-surface-raised);
+	--bs-dropdown-bg: var(--ui-surface-raised);
+	--bs-dropdown-color: var(--ui-text);
+	--bs-modal-bg: var(--ui-surface);
+	--bs-body-font-family: 'Inter Variable', Inter, system-ui, sans-serif;
+	--bs-body-font-size: 16px;
+	--bs-body-line-height: 1.45;
+	--bs-link-color: var(--ui-brass-strong);
+	--bs-link-hover-color: #ffcf82;
+	--bs-link-color-rgb: 232, 185, 103;
+	--bs-link-hover-color-rgb: 255, 207, 130;
+}
+
+:root[data-theme='light'] {
+	--ui-bg: #f4f1ea;
+	--ui-surface: #fffdf8;
+	--ui-surface-raised: #f2eee5;
+	--ui-field: #fff;
+	--ui-text: #18222c;
+	--ui-muted: #536270;
+	--ui-border: #c6cdd0;
+	--ui-brass: #80531b;
+	--ui-brass-strong: #704415;
+	--ui-shadow: 0 16px 48px rgb(35 42 50 / 0.1);
+	--ui-hero-overlay: linear-gradient(90deg, rgb(244 241 234 / 0.98), rgb(244 241 234 / 0.76) 62%, rgb(244 241 234 / 0.9));
+	--bs-body-bg: var(--ui-bg);
+	--bs-body-color: var(--ui-text);
+	--bs-border-color: var(--ui-border);
+	--bs-secondary-bg: var(--ui-surface);
+	--bs-tertiary-bg: var(--ui-surface-raised);
+	--bs-dropdown-bg: var(--ui-surface);
+	--bs-dropdown-color: var(--ui-text);
+	--bs-modal-bg: var(--ui-surface);
+	--bs-link-color: var(--ui-brass-strong);
+	--bs-link-hover-color: #4e2d09;
+	--bs-link-color-rgb: 112, 68, 21;
+	--bs-link-hover-color-rgb: 78, 45, 9;
+}
+
+html {
+	color-scheme: dark;
+}
+
+html[data-theme='light'] {
+	color-scheme: light;
+}
+
+body {
+	margin-right: 0;
+	background: var(--ui-bg);
+	color: var(--ui-text);
+}
+
+.skip-link {
+	position: fixed;
+	top: 8px;
+	left: 8px;
+	z-index: 10000;
+	padding: 10px 14px;
+	border-radius: 8px;
+	background: var(--ui-surface);
+	color: var(--ui-text);
+	transform: translateY(-150%);
+}
+
+.skip-link:focus {
+	transform: translateY(0);
+}
+
+* {
+	font-family: 'Inter Variable', Inter, system-ui, sans-serif;
+	letter-spacing: normal;
+}
+
+*::before,
+*::after {
+	letter-spacing: normal;
+}
+
+button,
+input,
+select,
+textarea {
+	font: inherit;
+}
+
+:focus-visible {
+	outline: 3px solid var(--ui-brass-strong) !important;
+	outline-offset: 2px;
+}
+
+.form-control,
+.form-select {
+	background-color: var(--ui-field);
+	border-color: var(--ui-border);
+	color: var(--ui-text);
+	min-height: 40px;
+	border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+	background-color: var(--ui-field);
+	border-color: var(--ui-brass);
+	color: var(--ui-text);
+	box-shadow: 0 0 0 3px rgb(201 142 44 / 0.18);
+}
+
+.form-control::placeholder {
+	color: var(--ui-muted);
+}
+
+.dropdown-menu,
+.modal-content,
+.toast {
+	background: var(--ui-surface);
+	border: 1px solid var(--ui-border);
+	color: var(--ui-text);
+	box-shadow: var(--ui-shadow);
+}
+
+.dropdown-item {
+	color: var(--ui-text);
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+	background: var(--ui-surface-raised);
+	color: var(--ui-text);
+}
+
+.theme-toggle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 8px;
+	min-height: 40px;
+	padding: 8px 12px;
+	border: 1px solid var(--ui-border);
+	border-radius: 10px;
+	background: var(--ui-surface);
+	color: var(--ui-text);
+	font-size: 0.8125rem;
+	font-weight: 650;
+	white-space: nowrap;
+	cursor: pointer;
+}
+
+.theme-toggle:hover {
+	border-color: var(--ui-brass);
+	background: var(--ui-surface-raised);
+}
+
+.theme-icon-dark,
+html[data-theme='light'] .theme-icon-light {
+	display: none;
+}
+
+html[data-theme='light'] .theme-icon-dark {
+	display: inline-block;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		scroll-behavior: auto !important;
+		animation-duration: 0.01ms !important;
+		transition-duration: 0.01ms !important;
+	}
+}

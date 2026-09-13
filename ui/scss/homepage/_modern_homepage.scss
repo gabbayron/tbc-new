@@ -1,0 +1,349 @@
+/* stylelint-disable plugin/stylelint-bem-namics */
+.home-page {
+	min-height: 100vh;
+}
+
+.homepage-image {
+	background-image: var(--ui-hero-overlay), url('/tbc/assets/img/tbc.jpg');
+	background-position: center top;
+	opacity: 0.6;
+}
+
+html[data-theme='light'] .homepage-image {
+	opacity: 0.28;
+}
+
+#homepage {
+	min-height: 100vh;
+	height: auto;
+}
+
+#homepage .homepage-header {
+	background: var(--ui-surface);
+	border-bottom: 1px solid var(--ui-border);
+}
+
+#homepage .homepage-header-container {
+	max-width: 1480px;
+	height: auto;
+	padding: 16px 28px;
+}
+
+#homepage .navbar-brand-container {
+	align-items: center;
+}
+
+#homepage .homepage-header .homepage-header-container .navbar-brand-container .wowsims-logo {
+	width: 48px;
+	height: 48px;
+	margin-right: 12px;
+	object-fit: contain;
+}
+
+#homepage .homepage-header .homepage-header-container .navbar-brand-container .wowsims-title {
+	font-size: 1.4rem;
+	font-weight: 800;
+	letter-spacing: -0.025em;
+	color: var(--ui-text);
+}
+
+#homepage .homepage-header .expansion-title {
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--ui-brass-strong);
+}
+
+#homepage .homepage-header-collapse {
+	align-items: center;
+	padding: 0;
+}
+
+#homepage .navbar-nav {
+	align-items: center;
+	gap: 12px;
+}
+
+#homepage .navbar-nav .nav-link {
+	color: var(--ui-muted);
+	font-size: 0.9rem;
+}
+
+#homepage .navbar-nav .nav-link:hover {
+	color: var(--ui-text);
+}
+
+#homepage .navbar-nav .fa-2x {
+	font-size: 1.1rem;
+}
+
+#homepage .navbar-nav .fs-4 {
+	font-size: 0.85rem !important;
+}
+
+#homepage .mobile-nav-label {
+	display: none;
+}
+
+#homepage .homepage-content-container {
+	max-width: 1480px;
+	height: auto;
+	padding: 42px 28px 80px;
+}
+
+#homepage .info-container {
+	min-height: 258px;
+	justify-content: center;
+	gap: 12px;
+	margin-bottom: 40px;
+	padding: 36px 42px;
+	border: 1px solid var(--ui-border);
+	border-radius: 20px;
+	background: var(--ui-hero-overlay), url('/tbc/assets/img/tbc.jpg') center 37% / cover;
+	box-shadow: var(--ui-shadow);
+}
+
+#homepage .homepage-eyebrow {
+	margin: 0;
+	color: var(--ui-brass-strong);
+	font-size: 0.7rem;
+	font-weight: 800;
+	letter-spacing: 0.11em;
+	text-transform: uppercase;
+}
+
+#homepage .homepage-hero-title {
+	max-width: 18ch;
+	margin: 0;
+	color: var(--ui-text);
+	font-size: clamp(2.25rem, 5vw, 4.5rem);
+	font-weight: 800;
+	line-height: 1.04;
+	letter-spacing: -0.05em;
+}
+
+#homepage .wowsims-info {
+	max-width: 62ch;
+	width: 100%;
+	margin: 0;
+	color: var(--ui-muted);
+	font-size: clamp(0.95rem, 1.3vw, 1.125rem) !important;
+	line-height: 1.6;
+}
+
+#homepage .homepage-section-heading {
+	display: flex;
+	align-items: end;
+	justify-content: space-between;
+	gap: 28px;
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+#homepage .homepage-section-heading h2 {
+	margin: 4px 0 0;
+	font-size: 1.55rem;
+	letter-spacing: -0.025em;
+}
+
+#homepage .homepage-section-heading > p {
+	max-width: 46ch;
+	margin: 0;
+	color: var(--ui-muted);
+	font-size: 0.9rem;
+}
+
+#homepage .sim-links-container {
+	width: 100%;
+}
+
+#homepage .homepage-content-container .sim-links-container > .sim-links {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 14px;
+	width: 100%;
+}
+
+#homepage .homepage-content-container .sim-links-container > .sim-links > .sim-link,
+#homepage .homepage-content-container .sim-links-container > .sim-links > .sim-link-dropdown {
+	flex: none;
+	max-width: none;
+	width: 100%;
+	min-width: 0;
+	margin: 0;
+}
+
+#homepage .homepage-content-container .sim-links-container .sim-links > .sim-link {
+	max-width: none;
+	flex: none;
+	width: 100%;
+	margin: 0;
+}
+
+#homepage .sim-links-container .sim-link-dropdown > .sim-links {
+	display: block;
+	margin: 0;
+}
+
+#homepage .homepage-content-container .sim-links-container .sim-link {
+	min-width: 0;
+	min-height: 82px;
+	border: 1px solid var(--ui-border);
+	border-left: 3px solid currentColor;
+	border-radius: 12px;
+	background: var(--ui-surface);
+	box-shadow: 0 4px 16px rgb(0 0 0 / 0.05);
+	text-align: left;
+	text-decoration: none;
+	transition: border-color 160ms ease, background-color 160ms ease, transform 160ms ease;
+}
+
+#homepage .sim-links-container .sim-link:hover,
+#homepage .sim-links-container .sim-link:focus-visible {
+	background: var(--ui-surface-raised);
+	transform: translateY(-2px);
+}
+
+#homepage .homepage-content-container .sim-links-container .sim-link-content {
+	gap: 4px;
+	min-height: 78px;
+	padding: 12px 16px;
+}
+
+#homepage .homepage-content-container .sim-links-container .sim-link-icon {
+	width: 44px;
+	height: 44px;
+	margin-right: 8px;
+	border-radius: 10px;
+}
+
+#homepage .homepage-content-container .sim-links-container .sim-link-title {
+	color: var(--ui-text);
+	font-size: 1rem;
+	font-weight: 750;
+}
+
+#homepage .homepage-content-container .sim-links-container .sim-link-label,
+#homepage .homepage-content-container .sim-links-container .launch-status-label {
+	color: var(--ui-muted);
+	font-size: 0.7rem;
+}
+
+#homepage .sim-link-dropdown .dropdown-menu {
+	width: 100%;
+	min-width: 250px;
+	padding: 6px;
+	border-radius: 12px;
+	background: var(--ui-surface-raised);
+}
+
+#homepage .sim-link-dropdown .dropdown-menu .sim-link {
+	min-height: 66px;
+	border: 0;
+	box-shadow: none;
+}
+
+#homepage .sim-link-dropdown .dropdown-menu .sim-link-content {
+	min-height: 62px;
+}
+
+#homepage .homepage-footer {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	padding: 22px 28px;
+	border-top: 1px solid var(--ui-border);
+	background: var(--ui-surface);
+	color: var(--ui-muted);
+	font-size: 0.78rem;
+}
+
+#homepage .homepage-footer a {
+	color: var(--ui-muted);
+}
+
+@media (max-width: 980px) {
+	#homepage .homepage-content-container .sim-links-container > .sim-links {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 767px) {
+	#homepage .homepage-header .homepage-header-container .homepage-header-collapse {
+		left: auto;
+		width: min(320px, 85vw);
+		padding: 68px 18px 24px;
+		border-left: 1px solid var(--ui-border);
+		background: var(--ui-surface);
+		box-shadow: var(--ui-shadow);
+	}
+
+	#homepage .homepage-header-container {
+		padding: 12px 18px;
+	}
+
+	#homepage .navbar-nav {
+		align-items: stretch;
+		gap: 4px;
+		width: 100%;
+	}
+
+	#homepage .navbar-nav .nav-link {
+		min-height: 44px;
+		gap: 12px;
+		padding: 10px 12px;
+		border-radius: 8px;
+		font-size: 0.95rem;
+	}
+
+	#homepage .navbar-nav .nav-link:hover,
+	#homepage .navbar-nav .nav-link:focus-visible {
+		background: var(--ui-surface-raised);
+	}
+
+	#homepage .navbar-nav .navbar-toggler {
+		top: 14px;
+		right: 14px;
+		color: var(--ui-text);
+	}
+
+	#homepage .navbar-nav .fa-2x {
+		font-size: 1.1rem;
+	}
+
+	#homepage .mobile-nav-label {
+		display: inline;
+		margin-left: 4px;
+	}
+
+	#homepage .navbar-nav .theme-toggle {
+		width: 100%;
+		justify-content: flex-start;
+	}
+
+	#homepage .homepage-content-container {
+		padding: 24px 16px 48px;
+	}
+
+	#homepage .info-container {
+		min-height: 0;
+		padding: 28px 22px;
+	}
+
+	#homepage .homepage-section-heading {
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	#homepage .homepage-content-container .sim-links-container > .sim-links {
+		grid-template-columns: 1fr;
+	}
+
+	#homepage .sim-link-dropdown .dropdown-menu {
+		position: relative !important;
+		inset: auto !important;
+		transform: none !important;
+	}
+}

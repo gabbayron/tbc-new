@@ -2,8 +2,7 @@ import clsx from 'clsx';
 import { ref } from 'tsx-vanilla';
 
 import i18n from '../../i18n/config.js';
-import { translateStatus } from '../../i18n/localization';
-import { translatePlayerClass, translatePlayerSpec } from '../../i18n/localization';
+import { translatePlayerClass, translatePlayerSpec, translateStatus } from '../../i18n/localization';
 import { simLaunchStatuses } from '../launched_sims.js';
 import { PlayerClass } from '../player_class.js';
 import { PlayerClasses } from '../player_classes/index.js';
@@ -79,7 +78,7 @@ export class SimTitleDropdown extends Component {
 				dataset={{ bsToggle: 'dropdown', bsTrigger: 'click' }}
 				attributes={{ 'aria-expanded': 'false' }}>
 				<div className="sim-link-content">
-					<img src={this.getSimIconPath(data)} className="sim-link-icon" />
+					<img src={this.getSimIconPath(data)} className="sim-link-icon" alt="" />
 					<div className="d-flex flex-column">
 						<span className="sim-link-label text-white">{i18n.t('sidebar.header.title')}</span>
 						<span className="sim-link-title">{PlayerSpecs.getFullSpecName(data.spec)}</span>
@@ -97,7 +96,7 @@ export class SimTitleDropdown extends Component {
 				dataset={{ bsToggle: 'dropdown' }}
 				attributes={{ 'aria-expanded': 'false' }}>
 				<div className="sim-link-content">
-					<img src={this.getSimIconPath({ type: 'Class', class: klass })} className="sim-link-icon" />
+					<img src={this.getSimIconPath({ type: 'Class', class: klass })} className="sim-link-icon" alt="" />
 					<div className="d-flex flex-column">
 						<span className="sim-link-title">{translatePlayerClass(klass)}</span>
 					</div>
@@ -110,7 +109,7 @@ export class SimTitleDropdown extends Component {
 		return (
 			<a href={spec.simLink} className={clsx('sim-link', this.getContextualKlass({ type: 'Spec', spec: spec }))}>
 				<div className="sim-link-content">
-					<img src={this.getSimIconPath({ type: 'Spec', spec: spec })} className="sim-link-icon" />
+					<img src={this.getSimIconPath({ type: 'Spec', spec: spec })} className="sim-link-icon" alt="" />
 					<div className="d-flex flex-column">
 						<span className="sim-link-label">{translatePlayerClass(PlayerSpecs.getPlayerClass(spec))}</span>
 						<span className="sim-link-title">{translatePlayerSpec(spec)}</span>
