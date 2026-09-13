@@ -1,5 +1,7 @@
 # UI redesign fork
 
+For the full architecture and rationale, see the [repository guide](repository-guide.md), [code and decision index](code-index.md), [redesign process](redesign-process.md), and [ADRs](adr/README.md).
+
 This fork starts from upstream `wowsims/tbc-new` commit `0d942e68c48ed87405814ca3a7313ed5dd7e84c0`. The redesign is kept on `ui-redesign`; `upstream` points to `https://github.com/wowsims/tbc-new.git` and `origin` to `https://github.com/gabbayron/tbc-new.git`.
 
 The Go simulation engine, protobuf schemas, saved-data keys, share-link routes, and import/export formats are unchanged. The UI still uses the upstream TypeScript/`tsx-vanilla` components. The shared workspace shell in `ui/core/components/sim_header.tsx` presents Build (Gear, Talents, Rotation), Setup (Settings), Results, and Batch. The same tabs are offered through a native select on narrow screens. Shared visual changes live in `ui/scss/shared/_modern_theme.scss`, `ui/scss/core/individual_sim_ui/_modern_workspace.scss`, and `ui/scss/homepage/_modern_homepage.scss` so spec logic can continue to merge from upstream.
